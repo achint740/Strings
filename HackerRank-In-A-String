@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 
-// Complete the hackerrankInString function below.
+
 string hackerrankInString(string s) 
 {
 char ar[]="hackerrank";
