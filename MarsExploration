@@ -1,0 +1,37 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
+
+class Solution
+{
+ public static void main(String args[])throws IOException
+ {
+     BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+     String s=br.readLine();
+     int l=s.length();
+     int c=0;
+     if(l%3==0)
+     {
+         for(int i=0;i<l;i=i+3)
+         {
+             if(s.charAt(i)!='S')
+                 c++;
+         }
+         for(int i=1;i<l;i+=3)
+         {
+             if(s.charAt(i)!='O')
+                 c++;
+         }
+         for(int i=2;i<l;i+=3)
+         {
+             if(s.charAt(i)!='S')
+                 c++;
+         }     
+     }
+     System.out.println(c); 
+  }
+}  
