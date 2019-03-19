@@ -1,0 +1,60 @@
+#include <bits/stdc++.h>
+#include<cstring>
+using namespace std;
+
+// Complete the caesarCipher function below.
+string caesarCipher(string s, int k)
+{
+    k%=26;
+  int len = s.length();
+  int a;
+  for(int i=0;i<len;i++)
+   {
+       if(s[i]>=97 && s[i]<=122)
+       {
+       //s[i] = (char)(s[i] + k);
+       //if(a<=122)
+         //cout<<(char)a;
+         int asc = (int)s[i] + k;
+       if(asc>122)
+         asc-=26;
+         s[i]=(char)asc;
+         //cout<<(char)(a-26);
+       }
+       else if(s[i]>=65 && s[i]<=90)
+       {
+         //s[i] = (char)s[i] + k;
+         //if(a<=90)
+           //cout<<(char)a;
+           int asc1 = (int)s[i] + k;
+          if(asc1>90) 
+             asc1-=26;
+             s[i]=(char)asc1;
+       }
+   }
+return s;
+}
+
+int main()
+{
+    ofstream fout(getenv("OUTPUT_PATH"));
+
+    int n;
+    cin >> n;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    string s;
+    getline(cin, s);
+
+    int k;
+    cin >> k;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+    string result = caesarCipher(s, k);
+
+    fout << result << "\n";
+
+    fout.close();
+
+    return 0;
+}
