@@ -1,0 +1,74 @@
+import java.io.*;
+class Sol
+{
+    public static void main(String args[])throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        String s=br.readLine();
+        String s1=s.toUpperCase();
+        int l=s.length();
+        char ch;
+        int ca,cb,cc,cd,ce,cf,cg,ch1,ci,cj,ck,cl,cm,cn,co,cp,cq,cr,cs,ct,cu,cv,cw,cx,cy,cz;
+        ca=cb=cc=cd=ce=cf=cg=ch1=ci=cj=cj=ck=cl=cm=cn=co=cp=cq=cr=cs=ct=cu=cv=cw=cx=cy=cz=0;
+        for(int i=0;i<l;i++)
+        {
+            ch=s1.charAt(i);
+            if(ch=='A' && ca==0)
+              ca++;
+            if(ch=='B' && cb==0)
+              cb++;
+            if(ch=='C' && cc==0)
+              cc++;
+            if(ch=='D' && cd==0)
+              cd++;
+            if(ch=='E' && ce==0)
+              ce++;
+            if(ch=='F' && cf==0)
+              cf++;
+            if(ch=='G' && cg==0)
+              cg++;
+            if(ch=='H' && ch1==0)
+              ch1++;
+            if(ch=='I' && ci==0)
+              ci++;
+            if(ch=='J' && cj==0)
+              cj++;
+            if(ch=='K' && ck==0)
+              ck++;
+            if(ch=='L' && cl==0)
+              cl++;
+            if(ch=='M' && cm==0)
+              cm++;
+            if(ch=='N' && cn==0)
+              cn++;
+            if(ch=='O' && co==0)
+              co++;
+            if(ch=='P' && cp==0)
+              cp++;
+            if(ch=='Q' && cq==0)
+              cq++;
+            if(ch=='R' && cr==0)
+              cr++;
+            if(ch=='S' && cs==0)
+              cs++;
+            if(ch=='T' && ct==0)
+              ct++;
+            if(ch=='U' && cu==0)
+              cu++;
+            if(ch=='V' && cv==0)
+              cv++;
+            if(ch=='W' && cw==0)
+              cw++;
+            if(ch=='X' && cx==0)
+              cx++;
+            if(ch=='Y' && cy==0)
+              cy++;
+            if(ch=='Z' && cz==0)
+              cz++;
+        }
+    int count = ca+cb+cc+cd+ce+cf+cg+ch1+ci+cj+ck+cl+cm+cn+co+cp+cq+cr+cs+ct+cu+cv+cw+cx+cy+cz;
+        if(count==26)
+            System.out.print("pangram");
+        else
+            System.out.print("not pangram");
+    }}
