@@ -18,20 +18,25 @@ int minimumNumber(int n, string password)
       else
         c4++;
     }  
-  if(c1==0)
+  if(c1==0){
     count++;
-  if(c2==0)
+  }
+  if(c2==0){
     count++;
-  if(c3==0)
+  }
+  if(c3==0){
     count++;
-  if(c4==0)
+  }
+  if(c4==0){
     count++;
+  }
   p=n+count;
-  if(p>=6)
+  if(p>=6){
     return count;
-    else
+  }
+  else{
     return 6-n;
-      
+  }
 }
 
 int main()
