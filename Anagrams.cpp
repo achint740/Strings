@@ -14,10 +14,12 @@ int anagram(string s)
          int l1=l/2;
          int a[26]={0};
          int b[26]={0};
-         for(i=0;i<l1;i++)
+         int i=0;
+         while(i<l1)
            {
                index = s[i] - 97;
                a[index]++;
+               i++;
            }
            for(i=l1;i<l;i++)
            {
